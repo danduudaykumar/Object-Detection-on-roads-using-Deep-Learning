@@ -48,7 +48,9 @@
 <body>
     <div class="container">
         <h2>Detected Objects</h2>
-        <img src="{{ image_path }}" alt="Processed Image">
+        <!-- <img src="{{ image_path }}" alt="Processed Image"> -->
+         <img src="{{ url_for('static', filename=image_path) }}" alt="Processed Image">
+
         <form action="/upload" method="GET">
             <button type="submit">Back Home</button>
         </form>
