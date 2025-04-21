@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: white;
+            background-color: #f2f2f2;
+        }
+
+        h2 {
+            font-size: 60px; /* Bigger font size */
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: black; /* Set text color to black */
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .image-container {
+            margin-bottom: 30px;
+        }
+
+        img {
+            width: 350px; /* Adjusted width */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-top: 20px; /* Add margin for spacing */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Style for Back Home button */
+        .back-home-button {
+            background-color: red;
+            margin-top: 20px; /* Add margin for spacing */
+        }
+
+        .back-home-button:hover {
+            background-color: #b30000; /* Darker red for hover effect */
+        }
+
+        /* Additional space for the buttons to align neatly */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to the Object Detection Project</h2>
+    
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='search.jpeg') }}" alt="Object Detection">
+    </div>
+
+    <div class="button-container">
+        <!-- Go to Upload Page Button -->
+        <form action="/upload" method="GET">
+            <button type="submit">Next</button>
+        </form>
+
+        <!-- Back Home Button -->
+        <form action="/" method="GET">
+            <button type="submit" class="back-home-button">Back Home</button>
+        </form>
+    </div>
+</body>
+</html>

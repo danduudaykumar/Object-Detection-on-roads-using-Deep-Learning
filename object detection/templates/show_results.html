@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detection Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 80%; /* Container takes up 80% of the screen width */
+            max-width: 1000px; /* Limit the width to 1000px for very large screens */
+        }
+        img {
+            width: 75%; /* Image takes up 75% of the container width */
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #5c9ded;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #4a86c2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Detected Objects</h2>
+        <img src="{{ image_path }}" alt="Processed Image">
+        <form action="/upload" method="GET">
+            <button type="submit">Back Home</button>
+        </form>
+    </div>
+</body>
+</html>
